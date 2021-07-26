@@ -1,0 +1,113 @@
+@font-face {
+    font-family: arin;
+    src:url("/fonts/Arinttika_Signature.ttf");
+}
+
+body{
+    background-color: #18222d;
+}
+
+#home{
+    visibility: hidden;
+    display: flex;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+    transition: visibility 0.5s, opacity 0.5s linear;
+}
+
+
+#home:target{
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+} 
+
+.card{
+    position: relative;
+    filter: grayscale(100%);
+    transition: all 200ms;
+}
+
+.card img{
+    position: relative;
+    min-height: 100px;
+    height: 20vh;
+    padding-left: 5px;
+}
+
+.card:hover{
+    transform: scale(1.3);
+    z-index: 10;
+    max-width: 600px;
+    filter: grayscale(0%);
+}
+
+.card-ampliada{
+    position: fixed;
+    top: -100%;
+    width: 100%;
+    background: rgba(0,0,0,.7);
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+}
+
+.card-ampliada img {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left:0;
+    right:0;
+    bottom: 0;
+    max-height: 0%;
+    max-width: 0%;
+    box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+    box-sizing: border-box;
+    transition: 200ms ease-in-out;
+}
+
+.card-ampliada:target {
+    opacity: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.card-ampliada:target img {
+    max-height: 90%;
+    max-width: 95%;
+}
+
+.flexContainer{
+    position: relative;
+    top: 50px;
+    width: 70%;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    margin: auto;
+    padding-bottom: 100px;
+}
