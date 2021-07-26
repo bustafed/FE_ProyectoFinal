@@ -23,7 +23,7 @@ body{
     z-index: 10;
     align-items: center;
     justify-content: center;
-    transition: visibility 0.5s, opacity 0.5s linear;
+    transition: background-color 0.5s, visibility 0.5s, opacity 0.5s linear;
 }
 
 
@@ -110,4 +110,20 @@ body{
     justify-content: center;
     margin: auto;
     padding-bottom: 100px;
+}
+
+@-moz-document url-prefix() {
+    #home:target {
+        background-color: rgba(0,0,0,.9);
+    }
+
+    #home:target img{
+        filter: blur(5px);
+        transition: filter 250ms;
+    }
+    
+    #home:target img:hover{
+        filter: blur(0);
+    }
+
 }
