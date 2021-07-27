@@ -1,11 +1,25 @@
-@font-face {
-    font-family: arin;
-    src:url("/fonts/Arinttika_Signature.ttf");
-}
+/* -------------------------------------------------------------------------- */
+/*                         body y contenedor principal                        */
+/* -------------------------------------------------------------------------- */
 
 body{
     background-color: #18222d;
 }
+
+.flexContainer{
+    position: relative;
+    top: 50px;
+    width: 70%;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    margin: auto;
+    padding-bottom: 100px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                logo landing                                */
+/* -------------------------------------------------------------------------- */
 
 #home{
     visibility: hidden;
@@ -45,6 +59,10 @@ body{
     justify-content: center;
 } 
 
+/* -------------------------------------------------------------------------- */
+/*                               tarjetas chicas                              */
+/* -------------------------------------------------------------------------- */
+
 .card{
     position: relative;
     filter: grayscale(100%);
@@ -64,6 +82,10 @@ body{
     max-width: 600px;
     filter: grayscale(0%);
 }
+
+/* -------------------------------------------------------------------------- */
+/*                             tarjetas ampliadas                             */
+/* -------------------------------------------------------------------------- */
 
 .card-ampliada{
     position: fixed;
@@ -101,16 +123,10 @@ body{
     max-width: 95%;
 }
 
-.flexContainer{
-    position: relative;
-    top: 50px;
-    width: 70%;
-    display: flex;
-    flex-wrap:wrap;
-    justify-content: center;
-    margin: auto;
-    padding-bottom: 100px;
-}
+
+/* -------------------------------------------------------------------------- */
+/*                 media queries para diferenciar navegadores                 */
+/* -------------------------------------------------------------------------- */
 
 @-moz-document url-prefix() {
     #home:target {
