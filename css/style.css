@@ -1,3 +1,115 @@
+@media screen and (max-width: 1199px) {
+/* -------------------------------------------------------------------------- */
+/*                     media query para celular y tablet                    */
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                         body y contenedor principal                        */
+/* -------------------------------------------------------------------------- */
+
+body{
+    background-color: #18222d;
+}
+
+.flexContainer{
+    left: 0;
+    right: 0;
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+    align-items: center;
+    margin: auto;
+    padding-bottom: 100px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                logo landing                                */
+/* -------------------------------------------------------------------------- */
+
+#home{
+    visibility: hidden;
+    display: flex;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.5s, visibility 0.5s, opacity 0.5s linear;
+}
+
+
+#home:target{
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+} 
+
+/* -------------------------------------------------------------------------- */
+/*                               tarjetas chicas                              */
+/* -------------------------------------------------------------------------- */
+
+.card{
+    pointer-events: none;
+    cursor: default;
+}
+
+.card img{
+    position: relative;
+    min-width: 100px;
+    width: 80vw;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                             tarjetas ampliadas                             */
+/* -------------------------------------------------------------------------- */
+
+.card-ampliada{
+    display: none;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                       media query para firefox mobile                      */
+/* -------------------------------------------------------------------------- */
+
+@-moz-document url-prefix() {
+    #home:target {
+        background-color: rgba(0,0,0,.9);
+    }
+}
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                          media query para desktop                          */
+/* -------------------------------------------------------------------------- */
+
+
+@media screen and (min-width: 1200px) {
+
 /* -------------------------------------------------------------------------- */
 /*                         body y contenedor principal                        */
 /* -------------------------------------------------------------------------- */
@@ -124,9 +236,14 @@ body{
 }
 
 
-/* -------------------------------------------------------------------------- */
-/*                 media queries para diferenciar navegadores                 */
-/* -------------------------------------------------------------------------- */
+}
+
+
+
+/* ------------------------------------------------------------------------------ */
+/*                 media query para diferenciar navegadores en desktop            */
+/* ------------------------------------------------------------------------------ */
+
 
 @-moz-document url-prefix() {
     #home:target {
