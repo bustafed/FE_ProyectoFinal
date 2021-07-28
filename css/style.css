@@ -19,7 +19,7 @@ body{
     width: 100%;
     display: flex;
     flex-direction: column;
-    flex-wrap:wrap;
+    flex-wrap:nowrap;
     align-items: center;
     margin: auto;
     padding-bottom: 100px;
@@ -45,7 +45,7 @@ body{
     z-index: 10;
     align-items: center;
     justify-content: center;
-    transition: background-color 0.5s, visibility 0.5s, opacity 0.5s linear;
+    transition: background-color 500ms, visibility 500ms, opacity 500ms linear;
 }
 
 
@@ -91,7 +91,7 @@ body{
 }
 
 /* -------------------------------------------------------------------------- */
-/*                             tarjetas ampliadas                             */
+/*                  tarjetas ampliadas anuladas, pues mobile                  */
 /* -------------------------------------------------------------------------- */
 
 .card-ampliada{
@@ -157,7 +157,7 @@ body{
     z-index: 10;
     align-items: center;
     justify-content: center;
-    transition: background-color 0.5s, visibility 0.5s, opacity 0.5s linear;
+    transition: background-color 500ms, visibility 500ms, opacity 500ms linear;
 }
 
 
