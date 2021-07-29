@@ -12,9 +12,9 @@ body{
 }
 
 .flexContainer{
+    position: absolute;
     left: 0;
     right: 0;
-    position: absolute;
     top: 50px;
     width: 100%;
     display: flex;
@@ -99,10 +99,10 @@ body{
 }
 
 /* -------------------------------------------------------------------------- */
-/*                       media query para firefox mobile                      */
+/*        diferenciando navegadores que no soportan backdrop-filter           */
 /* -------------------------------------------------------------------------- */
 
-@-moz-document url-prefix() {
+@supports not (backdrop-filter: blur(15px)) {
     #home:target {
         background-color: rgba(0,0,0,.9);
     }
@@ -243,11 +243,35 @@ body{
     max-width: 95%;
 }
 
+
+/* -------------------------------------------------------------------------- */
+/*                                   flechas                                  */
+/* -------------------------------------------------------------------------- */
+
+.arrowLeft{
+    scale: 1.7;
+    color: aliceblue;
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    left: 14px;
+}
+
+.arrowRight{
+    scale: 1.7;
+    color: aliceblue;
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    right: 14px;
+}
+
+
 /* ------------------------------------------------------------------------------ */
-/*                 media query para diferenciar navegadores en desktop            */
+/*    media query para diferenciar navegadores que no soportan backdrop-filter    */
 /* ------------------------------------------------------------------------------ */
 
-@-moz-document url-prefix() {
+@supports not (backdrop-filter: blur(15px)) {
     #home:target {
         background-color: rgba(0,0,0,.9);
     }
