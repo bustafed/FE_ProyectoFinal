@@ -249,7 +249,7 @@ body{
 /* -------------------------------------------------------------------------- */
 
 .arrowLeft{
-    scale: 1.7;
+    transform: scale(1.7);
     color: aliceblue;
     text-decoration: none;
     position: absolute;
@@ -258,7 +258,7 @@ body{
 }
 
 .arrowRight{
-    scale: 1.7;
+    transform: scale(1.7);
     color: aliceblue;
     text-decoration: none;
     position: absolute;
